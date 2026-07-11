@@ -1183,7 +1183,7 @@ section{
 
 
 <body>
-<audio src="hindia.mp3" controls loop></audio>
+<audio id="bgMusic" src="hindia.mp3" loop></audio>
   
 
 <!-- ===================================================
@@ -1853,6 +1853,10 @@ function openArchive(){
   .classList
   .add("closed");
 
+  var audio = document.getElementById("bgMusic");
+  if (audio) {
+      audio.play().catch(function(e) { console.log(e); });
+  }
 }
 
 
